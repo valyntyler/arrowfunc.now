@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.55307694"
+     inkscape:cx="14.464534"
+     inkscape:cy="424.89567"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch5">
+      <stop
+         style="stop-color:#00ff2c;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="swatch4">
+      <stop
+         style="stop-color:#11df4c;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="swatch3"
+       inkscape:swatch="solid"
+       inkscape:label="code-green"
+       gradientTransform="scale(0.26458333)">
+      <stop
+         style="stop-color:#00ee00;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="swatch2">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="swatch1"
+       inkscape:label="code-green">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient3"
+       x1="46.378883"
+       y1="84.192268"
+       x2="163.62111"
+       y2="84.192268"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient4"
+       x1="23.232992"
+       y1="27.927855"
+       x2="186.767"
+       y2="27.927855"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient5"
+       x1="82.346375"
+       y1="148.49998"
+       x2="127.65363"
+       y2="148.49998"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.396875"
+       id="rect5"
+       width="381.28302"
+       height="381.28302"
+       x="-85.641502"
+       y="-42.141502" />
+    <text
+       xml:space="preserve"
+       style="font-size:31.75px;line-height:12;text-align:start;word-spacing:-0.330729px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient5);fill-opacity:1;stroke:none;stroke-width:0.396875"
+       x="77.044128"
+       y="159.295"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:31.75px;line-height:12;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font Bold';fill:url(#linearGradient5);fill-opacity:1;stroke:none;stroke-width:0.396875"
+         x="77.044128"
+         y="159.295">();</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.875px;line-height:12;text-align:start;word-spacing:-0.330729px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill-opacity:1;stroke:none;stroke-width:0.396875;fill:url(#linearGradient3)"
+       x="105.30957"
+       y="89.589767"
+       id="text1-2"><tspan
+         sodipodi:role="line"
+         id="tspan1-2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.875px;line-height:12;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font Bold';text-align:center;text-anchor:middle;fill-opacity:1;stroke:none;stroke-width:0.396875;fill:url(#linearGradient3)"
+         x="105.30957"
+         y="89.589767">(() =&gt; {})();</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.1667px;line-height:12;text-align:start;word-spacing:-0.330729px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:0.396875"
+       x="104.5555"
+       y="35.547859"
+       id="text1-2-6"><tspan
+         sodipodi:role="line"
+         id="tspan1-2-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.1667px;line-height:12;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font Bold';text-align:center;text-anchor:middle;fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:0.396875"
+         x="104.5555"
+         y="35.547859">arrowFunc.now</tspan></text>
+  </g>
+</svg>
