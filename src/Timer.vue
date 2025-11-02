@@ -22,7 +22,8 @@ setInterval(() => {
 
 <style scoped>
 .timer {
-  margin: 0;
-  padding: 0;
+  margin-top: 4em;
+  font-size: 2.4em;
+  text-align: center;
 }
 </style>
