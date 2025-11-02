@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #000000;
+  --text-primary: #00ff00;
+  --text-secondary: #666666;
+  --text-dim: #333333;
+  --accent-color: #ffffff;
+  --border-color: #222222;
+  --hover-color: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.4;
+  min-height: 100vh;
+  font-size: 14px;
+}
