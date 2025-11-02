@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+setInterval(() => {
+  const dday = new Date("2025-11-30T10:00:00");
+  const left = new Date(dday - new Date());
+
+  const dd = String(left.getDate()).padStart(2, "0");
+  const hh = String(left.getHours()).padStart(2, "0");
+  const mm = String(left.getMinutes()).padStart(2, "0");
+  const ss = String(left.getSeconds()).padStart(2, "0");
+  const cs = String(Math.floor(left.getMilliseconds() / 10)).padStart(2, "0");
+
+  const result = `${dd}:${hh}:${mm}:${ss}:${cs}`;
+  document.querySelector(".timer").innerText = result;
+}, 0);
+</script>
 
 <template>
   <div class="container">
