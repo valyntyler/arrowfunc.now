@@ -1,29 +1,64 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>(() => {})();</h1>
-  <p>Do it.</p>
-  <p>Do what?</p>
-  <p>Do it now.</p>
-  <h2>Timeline</h2>
-  <ul>
-    <li>TAPC</li>
-    <li>BAPC</li>
-    <li>NWERC</li>
-  </ul>
-  <h2>Meet the Team</h2>
-  <ul>
-    <li>
-      <h3>Anton Anapreyenka</h3>
-      <span>Lorem Ipsum</span>
-    </li>
-    <li>
-      <h3>Niladri Adhikary</h3>
-    </li>
-    <li>
-      <h3>Valyn Tyler</h3>
-    </li>
-  </ul>
+  <div class="container">
+    <header class="header">
+      <h1>arrowFunc.now</h1>
+      <p class="subtitle">(() => {})();</p>
+    </header>
+
+    <section class="section">
+      <h2 class="juan">JUAN</h2>
+    </section>
+
+    <section class="section">
+      <h2 class="timer">27:09:36:07</h2>
+    </section>
+
+    <section class="section">
+      <h2>Roadmap</h2>
+      <div>
+        <h3 class="example-header">NWERC</h3>
+        <p class="example-description">
+          ICPC Northwestern Europe Regional Contest
+        </p>
+      </div>
+      <div>
+        <h3>BAPC</h3>
+        <p class="example-description">Benelux Algorithm Programming Contest</p>
+      </div>
+      <div>
+        <h3 class="example-header">TAPC</h3>
+        <p class="example-description">Twentse Algorithm Programming Contest</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Members</h2>
+      <div>
+        <h3 class="example-header">Anton Anapreyenka</h3>
+        <p class="example-description">dictators hate him</p>
+      </div>
+      <div>
+        <h3 class="example-header">Niladri Adhikary</h3>
+        <p class="example-description">baljeet energy</p>
+      </div>
+      <div>
+        <h3 class="example-header">Valyn Tyler</h3>
+        <p class="example-description">coffee gremlin</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <a href="https://github.com/valyntyler" target="_blank">@valyntyler</a>
+        |
+        <a href="https://github.com/valyntyler/arrowfunc.now" target="_blank"
+          >github</a
+        >
+      </p>
+    </footer>
+  </div>
 </template>
 
 <style scoped></style>
