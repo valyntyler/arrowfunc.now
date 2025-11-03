@@ -15,7 +15,7 @@ import { ref } from "vue";
 
 const events = ref([
   {
-    date: new Date(),
+    date: new Date("2025-11-30T10:00:00"),
     title: "NWERC",
     title_long: "ICPC Northwestern Europe Regional Contest",
   },
