@@ -1,5 +1,7 @@
 <template>
-  <h2 id="timer" class="timer">27:09:36:07</h2>
+  <section class="timer-container">
+    <h2 id="timer" class="timer">27:09:36:07</h2>
+  </section>
 </template>
 
 <script setup>
@@ -17,9 +19,20 @@ setInterval(() => {
 </script>
 
 <style scoped>
-.timer {
+.timer-container {
+  display: flex;
+  justify-content: center;
   margin-top: 4em;
   font-size: 2.4em;
-  text-align: center;
+}
+
+.timer {
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s ease;
+  background: var(--bg-color);
 }
 </style>
