@@ -1,14 +1,3 @@
-<template>
-  <ul class="event-list">
-    <EventItem
-      v-for="event in events"
-      :e_title="event.title"
-      :e_title_long="event.title_long"
-      :e_date="event.date"
-    ></EventItem>
-  </ul>
-</template>
-
 <script setup>
 import EventItem from "./EventItem.vue";
 import { ref } from "vue";
@@ -31,5 +20,16 @@ const events = ref([
   },
 ]);
 </script>
+
+<template>
+  <ul class="event-list">
+    <EventItem
+      v-for="event in events"
+      :e_title="event.title"
+      :e_title_long="event.title_long"
+      :e_date="event.date"
+    ></EventItem>
+  </ul>
+</template>
 
 <style scoped></style>

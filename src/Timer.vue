@@ -1,9 +1,3 @@
-<template>
-  <section class="timer-container">
-    <h2 id="timer" class="timer">27:09:36:07</h2>
-  </section>
-</template>
-
 <script setup>
 import moment from "moment";
 
@@ -17,6 +11,12 @@ setInterval(() => {
   timer.innerText = `${moment(left).format("DD:hh:mm:ss")}:${cs}`;
 }, 0);
 </script>
+
+<template>
+  <section class="timer-container">
+    <h2 id="timer" class="timer">27:09:36:07</h2>
+  </section>
+</template>
 
 <style scoped>
 .timer-container {
