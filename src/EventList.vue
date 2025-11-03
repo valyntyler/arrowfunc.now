@@ -32,4 +32,11 @@ const events = ref([
   </ul>
 </template>
 
-<style scoped></style>
+<style scoped>
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-size: 1.4rem;
+}
+</style>
