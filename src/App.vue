@@ -6,6 +6,7 @@ import Timer from "./Timer.vue";
 <template>
   <div class="container">
     <EventList></EventList>
+    <Timer></Timer>
   </div>
 </template>
 

@@ -1,20 +1,21 @@
 <script setup>
 import moment from "moment";
+import { ref } from "vue"
 
 const dday = new Date("2025-11-30T10:00:00");
+const time = ref();
 
 setInterval(() => {
   const left = new Date(dday - new Date());
   const cs = String(Math.floor(left.getMilliseconds() / 10)).padStart(2, "0");
 
-  const timer = document.getElementById("timer");
-  timer.innerText = `${moment(left).format("DD:hh:mm:ss")}:${cs}`;
+  time.value = `${moment(left).format("DD:hh:mm:ss")}:${cs}`;
 }, 0);
 </script>
 
 <template>
   <section class="timer-container">
-    <h2 id="timer" class="timer">27:09:36:07</h2>
+    <h2 id="timer" class="timer">{{ time }}</h2>
   </section>
 </template>
 
