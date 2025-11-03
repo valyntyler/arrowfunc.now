@@ -3,20 +3,16 @@
 </template>
 
 <script setup>
+import moment from "moment";
+
 const dday = new Date("2025-11-30T10:00:00");
 
 setInterval(() => {
   const left = new Date(dday - new Date());
-
-  const dd = String(left.getDate()).padStart(2, "0");
-  const hh = String(left.getHours()).padStart(2, "0");
-  const mm = String(left.getMinutes()).padStart(2, "0");
-  const ss = String(left.getSeconds()).padStart(2, "0");
   const cs = String(Math.floor(left.getMilliseconds() / 10)).padStart(2, "0");
 
-  const result = `${dd}:${hh}:${mm}:${ss}:${cs}`;
   const timer = document.getElementById("timer");
-  timer.innerText = result;
+  timer.innerText = `${moment(left).format("DD:hh:mm:ss")}:${cs}`;
 }, 0);
 </script>
 
