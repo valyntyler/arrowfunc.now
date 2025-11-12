@@ -35,5 +35,6 @@ setInterval(() => {
   border: 1px solid var(--border-color);
   transition: border-color 0.2s ease;
   background: var(--bg-color);
+  font-family: "UrsaFont ANSI";
 }
 </style>

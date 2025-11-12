@@ -22,3 +22,17 @@ body {
   min-height: 100vh;
   font-size: 14px;
 }
+
+@font-face {
+  font-family: 'UrsaFont';
+  src: url('assets/fonts/UrsaFont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UrsaFont ANSI';
+  src: url('assets/fonts/UrsaFont ANSI.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
