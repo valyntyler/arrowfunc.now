@@ -12,7 +12,8 @@ import Timer from "./Timer.vue";
 
 <style scoped>
 .container {
-  height: 100vh;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 </style>
