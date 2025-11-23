@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import moment from "moment";
 
 const props = defineProps({

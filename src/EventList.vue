@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import EventItem from "./EventItem.vue";
 import { ref } from "vue";
 

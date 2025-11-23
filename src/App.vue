@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import SplashText from "./SplashText.vue";
+import Timer from "./Timer.vue";
 </script>
 
 <template>
   <div class="container">
-    <SplashText></SplashText>
+    <Timer></Timer>
   </div>
 </template>
 
