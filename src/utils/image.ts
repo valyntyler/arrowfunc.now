@@ -25,7 +25,7 @@ export function loadImage(path: string, resolution: Vector2) {
   });
 }
 
-export function toImageSpace(position: Vector2, resolution: Vector2) {
+export function toImageSpace(position: Vector2, resolution: Vector2): number {
   const width = resolution[0];
   const x = position[0];
   const y = position[1];
@@ -36,11 +36,11 @@ export function imageRGB(
   image: ImageData,
   position: Vector2,
   resolution: Vector2,
-) {
+): [number, number, number] {
   const pixelIndex = toImageSpace(position, resolution);
   return [
-    image.data[pixelIndex],
-    image.data[pixelIndex + 1],
-    image.data[pixelIndex + 2],
+    image.data[pixelIndex]!,
+    image.data[pixelIndex + 1]!,
+    image.data[pixelIndex + 2]!,
   ];
 }
