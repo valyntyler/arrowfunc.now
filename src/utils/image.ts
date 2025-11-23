@@ -1,6 +1,9 @@
 type Vector2 = [number, number];
 
-export function loadImage(path: string, resolution: Vector2) {
+export function loadImage(
+  path: string,
+  resolution: Vector2,
+): Promise<ImageData> {
   return new Promise((resolve, reject) => {
     const img = new Image();
 
