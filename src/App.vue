@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Timer from "./Timer.vue";
+import TextHorse from "./views/TextHorse.vue";
 </script>
 
 <template>
   <div class="container">
-    <Timer></Timer>
+    <TextHorse></TextHorse>
   </div>
 </template>
 
