@@ -1,7 +1,9 @@
 import type { Textmodifier } from "textmode.js";
 
+type Drop = { y: number; speed: number; length: number; chars: string[] };
+
 // Rain drop system
-const drops = [];
+const drops: Drop[] = [];
 const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export const setup = (tm: Textmodifier) => {
@@ -15,8 +17,8 @@ export const setup = (tm: Textmodifier) => {
     };
 
     // Generate random characters for this drop
-    for (let i = 0; i < drops[gridX].length; i++) {
-      drops[gridX].chars[i] = chars[Math.floor(Math.random() * chars.length)];
+    for (let i = 0; i < drops[gridX]!.length; i++) {
+      drops[gridX]!.chars[i] = chars[Math.floor(Math.random() * chars.length)]!;
     }
   }
 };
@@ -26,7 +28,7 @@ export const draw = (tm: Textmodifier) => {
 
   // Update and draw each rain drop
   for (let gridX = 0; gridX < drops.length; gridX++) {
-    const drop = drops[gridX];
+    const drop = drops[gridX]!;
 
     // Draw the trail
     for (let i = 0; i < drop.length; i++) {
@@ -41,10 +43,10 @@ export const draw = (tm: Textmodifier) => {
 
         // Occasionally change character for glitch effect
         if (Math.random() < 0.1) {
-          drop.chars[i] = chars[Math.floor(Math.random() * chars.length)];
+          drop.chars[i] = chars[Math.floor(Math.random() * chars.length)]!;
         }
 
-        tm.char(drop.chars[i]);
+        tm.char(drop.chars[i]!);
         tm.cellColor(0, 0, 0);
 
         // Convert grid coordinates to center-based coordinates
@@ -76,7 +78,7 @@ export const draw = (tm: Textmodifier) => {
 
       // Generate new random characters
       for (let i = 0; i < drop.length; i++) {
-        drop.chars[i] = chars[Math.floor(Math.random() * chars.length)];
+        drop.chars[i] = chars[Math.floor(Math.random() * chars.length)]!;
       }
     }
   }
@@ -95,8 +97,8 @@ export const windowResized = (tm: Textmodifier) => {
       chars: [],
     };
 
-    for (let i = 0; i < drops[gridX].length; i++) {
-      drops[gridX].chars[i] = chars[Math.floor(Math.random() * chars.length)];
+    for (let i = 0; i < drops[gridX]!.length; i++) {
+      drops[gridX]!.chars[i] = chars[Math.floor(Math.random() * chars.length)]!;
     }
   }
 };
