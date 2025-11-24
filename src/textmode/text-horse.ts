@@ -14,11 +14,27 @@ export const draw = (t: Textmodifier) => {
 
       const color = imageRGB(horseImage!, [x, y], [t.grid.cols, t.grid.rows]);
 
-      t.char("#");
-      t.charColor(color[0], color[1], color[2]);
+      if (color[1] > 250) {
+        t.char("#");
+      } else if (color[1] > 191) {
+        t.char("@");
+      } else if (color[1] > 127) {
+        t.char("%");
+      } else if (color[1] > 95) {
+        t.char("*");
+      } else if (color[1] > 47) {
+        t.char("+");
+      } else {
+        t.char(".");
+      }
+
+      t.charColor(color[1], color[1], color[1]);
       t.cellColor(0, 0, 0);
       t.translate(x - t.grid.cols / 2 + 1, y - t.grid.rows / 2);
-      t.rect(1, 1);
+
+      if (color[1] >= 1) {
+        t.rect(1, 1);
+      }
 
       t.pop();
     }
