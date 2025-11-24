@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import TextHorse from "./views/TextHorse.vue";
+import Title from "./views/Title.vue";
 </script>
 
 <template>
   <div class="container">
     <TextHorse></TextHorse>
+    <Title></Title>
   </div>
 </template>
 

@@ -1,8 +1,9 @@
 :root {
   --bg-color: #000000;
   --text-primary: #00ff00;
+  --text-primary-dim: #007700;
   --text-secondary: #666666;
-  --text-dim: #333333;
+  --text-secondary-dim: #333333;
   --accent-color: #ffffff;
   --border-color: #222222;
   --hover-color: #111111;
@@ -24,15 +25,22 @@ body {
 }
 
 @font-face {
-  font-family: 'UrsaFont';
-  src: url('assets/fonts/UrsaFont.woff2') format('woff2');
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/JetBrainsMono.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'UrsaFont ANSI';
-  src: url('assets/fonts/UrsaFont ANSI.woff2') format('woff2');
+  font-family: "UrsaFont";
+  src: url("assets/fonts/UrsaFont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UrsaFont ANSI";
+  src: url("assets/fonts/UrsaFont ANSI.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
