@@ -1,14 +1,13 @@
 import type { Textmodifier } from "textmode.js";
 
-type Raindrop = { y: number; speed: number; length: number; chars: string[] };
+// Rain drop system
+const drops = [];
+const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const drops: Raindrop[] = [];
-const chars: string[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-export const setup = (t: Textmodifier) => {
+export const setup = (tm: Textmodifier) => {
   // Initialize rain drops
-  for (let x = 0; x < t.grid.cols; x++) {
-    drops[x] = {
+  for (let gridX = 0; gridX < tm.grid.cols; gridX++) {
+    drops[gridX] = {
       y: Math.random() * -50,
       speed: Math.random() * 0.3 + 0.1,
       length: Math.floor(Math.random() * 15) + 5,
@@ -16,52 +15,52 @@ export const setup = (t: Textmodifier) => {
     };
 
     // Generate random characters for this drop
-    for (let i = 0; i < drops[x]!.length; i++) {
-      drops[x]!.chars[i] = chars[Math.floor(Math.random() * chars.length)]!;
+    for (let i = 0; i < drops[gridX].length; i++) {
+      drops[gridX].chars[i] = chars[Math.floor(Math.random() * chars.length)];
     }
   }
 };
 
-export const draw = (t: Textmodifier) => {
+export const draw = (tm: Textmodifier) => {
+  tm.background(0);
+
   // Update and draw each rain drop
-  for (let x = 0; x < drops.length; x++) {
-    const drop = drops[x]!;
+  for (let gridX = 0; gridX < drops.length; gridX++) {
+    const drop = drops[gridX];
 
     // Draw the trail
     for (let i = 0; i < drop.length; i++) {
-      const y = drop.y - i;
-      if (y >= 0 && y < t.grid.rows) {
-        t.push();
+      const gridY = drop.y - i;
 
+      if (gridY >= 0 && gridY < tm.grid.rows) {
         // Calculate fade based on position in trail
         const fade = (drop.length - i) / drop.length;
 
-        // Body fades from bright green to dark green
-        const green = Math.floor(255 * fade * 0.8);
-        t.charColor(0, green, 0);
-
-        // Apply vignette
-        const center = [t.grid.cols / 2, t.grid.rows / 2];
-        const radius = Math.min(center[0]!, center[1]!);
-        const circle_fade = 10;
-
-        const diff = [center[0]! - x, center[1]! - y];
-        const distance =
-          Math.sqrt(diff[0]! * diff[0]! + diff[1]! * diff[1]!) - radius;
-
-        const intensity = (255 * (1 - distance)) / circle_fade;
-        // t.charColor(0, 255, 0);
+        // Head of the trail is brightest white
+        if (i === 0) {
+          tm.charColor(255, 255, 255);
+        } else {
+          // Body fades from bright green to dark green
+          const green = Math.floor(255 * fade * 0.8);
+          tm.charColor(0, green, 0);
+        }
 
         // Occasionally change character for glitch effect
         if (Math.random() < 0.1) {
-          drop.chars[i]! = chars[Math.floor(Math.random() * chars.length)]!;
+          drop.chars[i] = chars[Math.floor(Math.random() * chars.length)];
         }
 
-        t.char(drop.chars[i]!);
-        t.cellColor(0, x, 0);
-        t.rect(x, Math.floor(y));
+        tm.char(drop.chars[i]);
+        tm.cellColor(0, 0, 0);
 
-        t.pop();
+        // Convert grid coordinates to center-based coordinates
+        const x = gridX + 1 - tm.grid.cols / 2;
+        const y = Math.floor(gridY) - tm.grid.rows / 2;
+
+        tm.push();
+        tm.translate(x, y, 0);
+        tm.rect(1, 1);
+        tm.pop();
       }
     }
 
@@ -69,17 +68,34 @@ export const draw = (t: Textmodifier) => {
     drop.y += drop.speed;
 
     // Reset drop when it goes off screen
-    if (drop.y - drop.length > t.grid.rows) {
+    if (drop.y - drop.length > tm.grid.rows) {
       drop.y = Math.random() * -50;
       drop.speed = Math.random() * 0.3 + 0.1;
       drop.length = Math.floor(Math.random() * 15) + 5;
 
       // Generate new random characters
       for (let i = 0; i < drop.length; i++) {
-        drop.chars[i]! = chars[Math.floor(Math.random() * chars.length)]!;
+        drop.chars[i] = chars[Math.floor(Math.random() * chars.length)];
       }
     }
   }
 };
 
-export const windowResized = (t: Textmodifier) => {};
+export const windowResized = (tm: Textmodifier) => {
+  tm.resizeCanvas(window.innerWidth, window.innerHeight);
+
+  // Reinitialize drops for new grid size
+  drops.length = 0;
+  for (let gridX = 0; gridX < tm.grid.cols; gridX++) {
+    drops[gridX] = {
+      y: Math.random() * -50,
+      speed: Math.random() * 0.3 + 0.1,
+      length: Math.floor(Math.random() * 15) + 5,
+      chars: [],
+    };
+
+    for (let i = 0; i < drops[gridX].length; i++) {
+      drops[gridX].chars[i] = chars[Math.floor(Math.random() * chars.length)];
+    }
+  }
+};
