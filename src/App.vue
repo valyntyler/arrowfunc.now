@@ -2,6 +2,7 @@
 import TextHorse from "./views/TextHorse.vue";
 import Timer from "./views/Timer.vue";
 import Header from "./views/Header.vue";
+import Footer from "./views/Footer.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Header from "./views/Header.vue";
     <TextHorse></TextHorse>
     <Header></Header>
     <Timer></Timer>
+    <Footer></Footer>
   </div>
 </template>
 
