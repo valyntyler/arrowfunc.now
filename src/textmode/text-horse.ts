@@ -4,7 +4,10 @@ import type { Textmodifier } from "textmode.js";
 let horseImage: ImageData | null = null;
 
 export const setup = async (t: Textmodifier) => {
-  horseImage = await loadImage("twente.svg", [t.grid.cols, t.grid.rows]);
+  horseImage = await loadImage(`${import.meta.env.BASE_URL}/twente.svg`, [
+    t.grid.cols,
+    t.grid.rows,
+  ]);
 };
 
 export const draw = (t: Textmodifier) => {
