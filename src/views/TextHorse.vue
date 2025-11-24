@@ -31,13 +31,13 @@ onMounted(() => {
 
   t.setup(() => {
     onWindowResized();
-    // CodeRain.setup(t);
+    CodeRain.setup(t);
     CodeHorse.setup(t);
   });
 
   t.draw(() => {
     t.background(0);
-    // CodeRain.draw(t);
+    CodeRain.draw(t);
     CodeHorse.draw(t);
   });
 
