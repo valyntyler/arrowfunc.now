@@ -23,6 +23,7 @@ onMounted(() => {
     const height = Math.min(window.innerWidth, window.innerHeight);
     const width = height * aspectRatio;
 
+    // FIX: font not scaling when screen resizes
     t.resizeCanvas(width * 0.6, height * 0.6);
   };
 
