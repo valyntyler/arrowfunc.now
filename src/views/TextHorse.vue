@@ -59,6 +59,6 @@ onMounted(() => {
 }
 
 .render-target {
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 </style>
