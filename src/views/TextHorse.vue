@@ -3,6 +3,8 @@ import { loadImage, imageRGB } from "@/utils/image";
 import { textmode } from "textmode.js";
 import { onMounted, useTemplateRef } from "vue";
 
+import * as CodeRain from "@/textmode/code-rain";
+
 const aspectRatio = 960 / 639;
 const canvasRef = useTemplateRef("canvasRef");
 
@@ -25,10 +27,12 @@ onMounted(() => {
 
   t.setup(() => {
     onWindowResized();
+    CodeRain.setup(t);
   });
 
   t.draw(() => {
     t.background(0);
+    CodeRain.draw(t);
 
     t.char("A");
     t.charColor(255, 255, 255);
@@ -36,7 +40,10 @@ onMounted(() => {
     t.rect(16, 16);
   });
 
-  t.windowResized = onWindowResized;
+  t.windowResized = () => {
+    onWindowResized();
+    CodeRain.windowResized(t);
+  };
 });
 </script>
 
