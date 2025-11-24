@@ -38,7 +38,6 @@ export const draw = (tm: Textmodifier) => {
 
         // Body fades from bright green to dark green
         const green = Math.floor(255 * fade * 0.8);
-        tm.charColor(0, green, 0);
 
         // Occasionally change character for glitch effect
         if (Math.random() < 0.1) {
@@ -51,6 +50,13 @@ export const draw = (tm: Textmodifier) => {
         // Convert grid coordinates to center-based coordinates
         const x = gridX + 1 - tm.grid.cols / 2;
         const y = Math.floor(gridY) - tm.grid.rows / 2;
+
+        // Apply vignette
+        const radius = Math.min(tm.grid.cols / 2, tm.grid.rows / 2);
+        const vignette = 10;
+        const distance = Math.sqrt(x * x + y * y) - radius;
+        const brightness = (255 * (1 - distance)) / vignette;
+        tm.charColor(0, brightness, 0);
 
         tm.push();
         tm.translate(x, y, 0);
