@@ -24,7 +24,7 @@ setInterval(() => {
   display: flex;
   justify-content: center;
   margin-top: 4em;
-  font-size: 2.4em;
+  font-size: 18px;
 }
 
 .timer {
@@ -35,6 +35,6 @@ setInterval(() => {
   border: 1px solid var(--border-color);
   transition: border-color 0.2s ease;
   background: var(--bg-color);
-  font-family: "UrsaFont ANSI";
+  font-family: "UrsaFont";
 }
 </style>
