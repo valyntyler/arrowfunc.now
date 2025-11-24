@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { loadImage, imageRGB } from "@/utils/image";
 import { textmode } from "textmode.js";
 import { onMounted, useTemplateRef } from "vue";
 
@@ -19,36 +18,30 @@ onMounted(() => {
     canvas: canvasRef.value!,
   });
 
-  const onWindowResized = () => {
+  const onWindowResized = async () => {
     const height = Math.min(window.innerWidth, window.innerHeight);
     const width = height * aspectRatio;
 
     // FIX: font not scaling when screen resizes
     t.resizeCanvas(width * 0.6, height * 0.6);
+
+    // CodeRain.windowResized(t);
+    // CodeHorse.windowResized(t);
   };
 
   t.setup(() => {
     onWindowResized();
-    CodeRain.setup(t);
+    // CodeRain.setup(t);
     CodeHorse.setup(t);
   });
 
   t.draw(() => {
     t.background(0);
-    CodeRain.draw(t);
+    // CodeRain.draw(t);
     CodeHorse.draw(t);
-
-    // t.char("A");
-    // t.charColor(255, 255, 255);
-    // t.rotateZ(t.frameCount * 2);
-    // t.rect(16, 16);
   });
 
-  t.windowResized = () => {
-    onWindowResized();
-    CodeRain.windowResized(t);
-    CodeHorse.windowResized(t);
-  };
+  t.windowResized = onWindowResized;
 });
 </script>
 
