@@ -36,14 +36,9 @@ export const draw = (tm: Textmodifier) => {
         // Calculate fade based on position in trail
         const fade = (drop.length - i) / drop.length;
 
-        // Head of the trail is brightest white
-        if (i === 0) {
-          tm.charColor(255, 255, 255);
-        } else {
-          // Body fades from bright green to dark green
-          const green = Math.floor(255 * fade * 0.8);
-          tm.charColor(0, green, 0);
-        }
+        // Body fades from bright green to dark green
+        const green = Math.floor(255 * fade * 0.8);
+        tm.charColor(0, green, 0);
 
         // Occasionally change character for glitch effect
         if (Math.random() < 0.1) {

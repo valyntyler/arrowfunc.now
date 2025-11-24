@@ -28,7 +28,7 @@ export const draw = (t: Textmodifier) => {
         t.char(".");
       }
 
-      t.charColor(color[1], color[1], color[1]);
+      t.charColor(0, color[1], 0);
       t.cellColor(0, 0, 0);
       t.translate(x - t.grid.cols / 2 + 1, y - t.grid.rows / 2);
 
