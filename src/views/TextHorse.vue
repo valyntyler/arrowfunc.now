@@ -4,6 +4,7 @@ import { textmode } from "textmode.js";
 import { onMounted, useTemplateRef } from "vue";
 
 import * as CodeRain from "@/textmode/code-rain";
+import * as CodeHorse from "@/textmode/text-horse";
 
 const aspectRatio = 960 / 639;
 const canvasRef = useTemplateRef("canvasRef");
@@ -28,21 +29,24 @@ onMounted(() => {
   t.setup(() => {
     onWindowResized();
     CodeRain.setup(t);
+    CodeHorse.setup(t);
   });
 
   t.draw(() => {
     t.background(0);
     CodeRain.draw(t);
+    CodeHorse.draw(t);
 
-    t.char("A");
-    t.charColor(255, 255, 255);
-    t.rotateZ(t.frameCount * 2);
-    t.rect(16, 16);
+    // t.char("A");
+    // t.charColor(255, 255, 255);
+    // t.rotateZ(t.frameCount * 2);
+    // t.rect(16, 16);
   });
 
   t.windowResized = () => {
     onWindowResized();
     CodeRain.windowResized(t);
+    CodeHorse.windowResized(t);
   };
 });
 </script>
