@@ -1,4 +1,4 @@
-type Vector2 = [number, number];
+import type { Vector2 } from "@/types/vector";
 
 export function loadImage(
   path: string,
