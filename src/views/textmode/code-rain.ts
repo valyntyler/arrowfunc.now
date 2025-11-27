@@ -85,8 +85,6 @@ export const draw = (tm: Textmodifier) => {
 };
 
 export const windowResized = (tm: Textmodifier) => {
-  tm.resizeCanvas(window.innerWidth, window.innerHeight);
-
   // Reinitialize drops for new grid size
   drops.length = 0;
   for (let gridX = 0; gridX < tm.grid.cols; gridX++) {
