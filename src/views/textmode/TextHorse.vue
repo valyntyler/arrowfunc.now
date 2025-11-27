@@ -12,6 +12,15 @@ onMounted(() => {
   canvasRef.value!.focus();
   canvasRef.value!.classList.add("render-target");
 
+  console.log("hi");
+  document.addEventListener("keypress", (event) => {
+    if (event.key === "f") {
+      event.preventDefault();
+      if (document.fullscreenElement) document.exitFullscreen();
+      else canvasRef.value!.requestFullscreen();
+    }
+  });
+
   const t = textmode.create({
     fontSize: 16,
     frameRate: 60,
