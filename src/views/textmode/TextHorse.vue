@@ -12,7 +12,6 @@ onMounted(() => {
   canvasRef.value!.focus();
   canvasRef.value!.classList.add("render-target");
 
-  console.log("hi");
   document.addEventListener("keypress", (event) => {
     if (event.key === "f") {
       event.preventDefault();
