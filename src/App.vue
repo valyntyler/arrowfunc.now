@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ScrollSection from "./components/ScrollSection.vue";
+</script>
 
 <template>
   <main>
-    <section><div>1</div></section>
-    <section><div>2</div></section>
-    <section><div>3</div></section>
-    <section><div>4</div></section>
-    <section><div>5</div></section>
+    <ScrollSection>1</ScrollSection>
+    <ScrollSection>2</ScrollSection>
+    <ScrollSection>3</ScrollSection>
+    <ScrollSection>4</ScrollSection>
+    <ScrollSection>5</ScrollSection>
   </main>
 </template>
 
@@ -15,24 +17,5 @@ main {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-}
-
-main > section {
-  height: 100vh;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-color: var(--text-primary);
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-main > section:nth-child(odd) {
-  border-color: var(--text-primary-dim);
-}
-
-main > section > div {
-  font-size: 60px;
 }
 </style>
