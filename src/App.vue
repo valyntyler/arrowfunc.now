@@ -1,21 +1,16 @@
 <script setup lang="ts">
 import ScrollSection from "./components/ScrollSection.vue";
+import ScrollColumn from "./components/ScrollColumn.vue";
 </script>
 
 <template>
-  <main>
+  <ScrollColumn>
     <ScrollSection>1</ScrollSection>
     <ScrollSection>2</ScrollSection>
     <ScrollSection>3</ScrollSection>
     <ScrollSection>4</ScrollSection>
     <ScrollSection>5</ScrollSection>
-  </main>
+  </ScrollColumn>
 </template>
 
-<style scoped>
-main {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-</style>
+<style scoped></style>
