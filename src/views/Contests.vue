@@ -30,7 +30,6 @@ h3 {
 }
 
 h3:last-of-type {
-  text-transform: uppercase;
   color: var(--text-secondary);
 }
 
