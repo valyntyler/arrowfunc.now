@@ -5,6 +5,22 @@ import Header from "./views/Header.vue";
 import Footer from "./views/Footer.vue";
 import Members from "./views/Members.vue";
 import Contests from "./views/Contests.vue";
+
+let headingIndex = 0;
+
+document.addEventListener("keypress", (event) => {
+  const headings = Array.from(document.querySelectorAll("h1, h2, h3"));
+  if (event.key.toLowerCase() === "j") {
+    headingIndex = Math.min(Math.max(0, headingIndex + 1), headings.length);
+    headings[headingIndex]?.scrollIntoView();
+    console.log(headingIndex);
+  }
+  if (event.key.toLowerCase() === "k") {
+    headingIndex = Math.min(Math.max(0, headingIndex - 1), headings.length);
+    headings[headingIndex]?.scrollIntoView();
+    console.log(headingIndex);
+  }
+});
 </script>
 
 <template>
