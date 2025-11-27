@@ -3,12 +3,15 @@ import TextHorse from "./views/textmode/TextHorse.vue";
 import Timer from "./views/Timer.vue";
 import Header from "./views/Header.vue";
 import Footer from "./views/Footer.vue";
+import Members from "./views/Members.vue";
 </script>
 
 <template>
   <div class="container">
     <TextHorse></TextHorse>
     <Header></Header>
+    <Contests></Contests>
+    <Members></Members>
     <Timer></Timer>
     <Footer></Footer>
   </div>
