@@ -2,8 +2,8 @@
 import { textmode } from "textmode.js";
 import { onMounted, useTemplateRef } from "vue";
 
-import * as CodeRain from "@/textmode/code-rain";
-import * as CodeHorse from "@/textmode/text-horse";
+import * as CodeRain from "@/views/textmode/code-rain";
+import * as CodeHorse from "@/views/textmode/text-horse";
 
 const aspectRatio = 960 / 639;
 const canvasRef = useTemplateRef("canvasRef");

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextHorse from "./views/TextHorse.vue";
+import TextHorse from "./views/textmode/TextHorse.vue";
 import Timer from "./views/Timer.vue";
 import Header from "./views/Header.vue";
 import Footer from "./views/Footer.vue";
