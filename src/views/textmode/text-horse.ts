@@ -92,4 +92,9 @@ export const draw = (t: Textmodifier) => {
   }
 };
 
-export const windowResized = async (t: Textmodifier) => {};
+export const windowResized = async (t: Textmodifier) => {
+  horseImage = await loadImage(`${import.meta.env.BASE_URL}twente.svg`, [
+    t.grid.cols,
+    t.grid.rows,
+  ]);
+};

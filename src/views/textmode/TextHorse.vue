@@ -9,6 +9,23 @@ const aspectRatio = 960 / 639;
 const canvasRef = useTemplateRef("canvasRef");
 
 onMounted(() => {
+  const t = textmode.create({
+    fontSize: 16,
+    frameRate: 60,
+    canvas: canvasRef.value!,
+  });
+
+  const onWindowResized = () => {
+    const height = Math.min(window.innerWidth, window.innerHeight);
+    const width = height * aspectRatio;
+
+    // FIX: font not scaling when screen resizes
+    t.resizeCanvas(width * 0.6, height * 0.6);
+
+    CodeRain.windowResized(t);
+    CodeHorse.windowResized(t);
+  };
+
   canvasRef.value!.focus();
   canvasRef.value!.classList.add("render-target");
 
@@ -20,22 +37,7 @@ onMounted(() => {
     }
   });
 
-  const t = textmode.create({
-    fontSize: 16,
-    frameRate: 60,
-    canvas: canvasRef.value!,
-  });
-
-  const onWindowResized = async () => {
-    const height = Math.min(window.innerWidth, window.innerHeight);
-    const width = height * aspectRatio;
-
-    // FIX: font not scaling when screen resizes
-    t.resizeCanvas(width * 0.6, height * 0.6);
-
-    // CodeRain.windowResized(t);
-    // CodeHorse.windowResized(t);
-  };
+  window.addEventListener("resize", onWindowResized);
 
   t.setup(() => {
     onWindowResized();
