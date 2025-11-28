@@ -19,8 +19,10 @@ onMounted(() => {
     const height = Math.min(window.innerWidth, window.innerHeight);
     const width = height * aspectRatio;
 
-    if (window.innerWidth < 600) {
-      t.fontSize(12);
+    if (window.innerWidth < 400) {
+      t.fontSize(8);
+    } else if (window.innerWidth < 600) {
+      t.fontSize(16);
     } else {
       t.fontSize(16);
     }
