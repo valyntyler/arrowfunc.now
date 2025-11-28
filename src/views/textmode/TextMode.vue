@@ -19,6 +19,12 @@ onMounted(() => {
     const height = Math.min(window.innerWidth, window.innerHeight);
     const width = height * aspectRatio;
 
+    if (window.innerWidth < 600) {
+      t.fontSize(12);
+    } else {
+      t.fontSize(16);
+    }
+
     t.resizeCanvas(width * 0.6, height * 0.6);
 
     CodeRain.windowResized(t);
