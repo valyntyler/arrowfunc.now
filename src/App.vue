@@ -21,8 +21,4 @@ import Header from "./views/Header.vue";
   </ScrollColumn>
 </template>
 
-<style scoped>
-section:nth-child(1) {
-  gap: 15vh;
-}
-</style>
+<style scoped></style>
