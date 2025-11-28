@@ -53,12 +53,4 @@ span h3:last-of-type {
 h3:last-of-type {
   color: var(--text-primary-dim);
 }
-
-ul {
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 </style>
