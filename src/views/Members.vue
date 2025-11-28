@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h2>Members</h2>
+  <h2>Team</h2>
   <ul>
     <li><h3>Anton Anapreyenka</h3></li>
     <li><h3>Niladri Adhikary</h3></li>
@@ -33,6 +33,7 @@ ul {
   margin-top: 1.4em;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 

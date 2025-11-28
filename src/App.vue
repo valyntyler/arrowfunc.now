@@ -4,6 +4,10 @@ import ScrollColumn from "./components/ScrollColumn.vue";
 
 import TextMode from "./views/textmode/TextMode.vue";
 import Header from "./views/Header.vue";
+
+import Contests from "./views/Contests.vue";
+
+import Members from "./views/Members.vue";
 </script>
 
 <template>
@@ -13,10 +17,10 @@ import Header from "./views/Header.vue";
       <Header></Header>
     </ScrollSection>
     <ScrollSection>
-      <h2>Contests</h2>
+      <Contests></Contests>
     </ScrollSection>
     <ScrollSection>
-      <h2>Team</h2>
+      <Members></Members>
     </ScrollSection>
   </ScrollColumn>
 </template>
