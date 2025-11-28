@@ -2,11 +2,12 @@
 import Timer from "./Timer.vue";
 
 import ContentItem from "@/components/ContentItem.vue";
+import ContentList from "@/components/ContentList.vue";
 </script>
 
 <template>
   <h2>Events</h2>
-  <ul>
+  <ContentList>
     <ContentItem>
       <span>
         <h3>NWERC</h3>
@@ -17,18 +18,18 @@ import ContentItem from "@/components/ContentItem.vue";
     <ContentItem>
       <span>
         <h3>BAPC</h3>
-        <h3>25th of October, 2025</h3>
+        <h3>25 Oct, 2025</h3>
       </span>
       <h3>Benelux Algorithm Programming Contest</h3>
     </ContentItem>
     <ContentItem>
       <span>
         <h3>TAPC</h3>
-        <h3>20th of September, 2025</h3>
+        <h3>20 Sep, 2025</h3>
       </span>
       <h3>Twentse Algorithm Programming Contest</h3>
     </ContentItem>
-  </ul>
+  </ContentList>
 </template>
 
 <style scoped>
