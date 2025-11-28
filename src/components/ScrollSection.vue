@@ -9,16 +9,12 @@
 <style scoped>
 section {
   height: 100vh;
-  border: 1px solid;
+  /* border: 1px solid; */
+  /* border-color: var(--text-primary); */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: var(--text-primary);
   scroll-snap-align: start;
   scroll-snap-stop: always;
-}
-
-section > div {
-  font-size: 60px;
 }
 </style>

@@ -21,7 +21,13 @@ body {
   color: var(--text-primary);
   line-height: 1.4;
   min-height: 100vh;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }
 
 @font-face {

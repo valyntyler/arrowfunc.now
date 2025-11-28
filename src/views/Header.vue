@@ -11,7 +11,6 @@
 .header {
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
   font-weight: bold;
   margin-top: 10vh;
 }

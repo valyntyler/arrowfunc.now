@@ -12,10 +12,12 @@ import Header from "./views/Header.vue";
       <TextMode></TextMode>
       <Header></Header>
     </ScrollSection>
-    <ScrollSection>2</ScrollSection>
-    <ScrollSection>3</ScrollSection>
-    <ScrollSection>4</ScrollSection>
-    <ScrollSection>5</ScrollSection>
+    <ScrollSection>
+      <h2>Contests</h2>
+    </ScrollSection>
+    <ScrollSection>
+      <h2>Team</h2>
+    </ScrollSection>
   </ScrollColumn>
 </template>
 
