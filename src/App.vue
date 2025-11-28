@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import ScrollSection from "./components/ScrollSection.vue";
 import ScrollColumn from "./components/ScrollColumn.vue";
+
+import TextMode from "./views/textmode/TextMode.vue";
+import Header from "./views/Header.vue";
 </script>
 
 <template>
   <ScrollColumn>
-    <ScrollSection>1</ScrollSection>
+    <ScrollSection>
+      <TextMode></TextMode>
+      <Header></Header>
+    </ScrollSection>
     <ScrollSection>2</ScrollSection>
     <ScrollSection>3</ScrollSection>
     <ScrollSection>4</ScrollSection>
