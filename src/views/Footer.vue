@@ -3,7 +3,7 @@
 <template>
   <footer class="footer">
     <p>
-      <a target="_blank" href="github.com/valyntyler">@valyntyler</a> |
+      <a target="_blank" href="https://github.com/valyntyler">@valyntyler</a> |
       <a href="https://github.com/valyntyler/arrowfunc.now" target="_blank"
         >github</a
       >
